@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+apply plugin: 'application'
+
+mainClassName = 'com.acme.mktlogic.MktLogicApp'
+
+run {
+    args = ["./data/input.txt"]
+}
+
+repositories {
+    jcenter()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    testCompile "junit:junit:4.11"
+}
+
+test {
+  testLogging.showStandardStreams = true
+}
